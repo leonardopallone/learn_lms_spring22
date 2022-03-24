@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import CourseList from './CourseList';
 import CourseForm from './CourseForm';
-
+import { Button } from 'react-bootstrap';
 const Courses = () => {
   const [courses, setCourses] = useState([])
   const [adding, setAdd] = useState(false)
@@ -28,10 +28,10 @@ const Courses = () => {
             addCourse={addCourse}
             setAdd={setAdd}
           />
-          <button onClick={() => setAdd(false)}>Cancel</button>
+          <Button onClick={() => setAdd(false)}>Cancel</Button>
         </>
         :
-        <button onClick={() => setAdd(true)}>+</button>
+        <Button onClick={() => setAdd(true)}>+</Button>
       }
       <h1>Courses</h1>
       <CourseList
