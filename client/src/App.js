@@ -8,6 +8,7 @@ import Users from "./components/users/Users";
 import Nomatch from "./components/shared/Nomatch";
 import UserShow from "./components/users/UserShow";
 import CourseShow from "./components/courses/CourseShow";
+import Enrollments from "./components/enrollments/Enrollments";
 
 const App = () => (
   <>
@@ -16,6 +17,7 @@ const App = () => (
       <Route path='/' element={ <Home /> } />
       <Route path='/courses' element={ <Courses /> } />
       <Route path='/courses/:courseId' element={ <CourseShow /> } />
+      <Route path='/:courseId/enrollments' element={ <Enrollments /> } />
       <Route path='/users' element={ <Users /> } />
       <Route path='/users/:userId' element={ <UserShow /> } />
       <Route path='*' element={ <Nomatch /> } />
@@ -25,3 +27,4 @@ const App = () => (
 )
 
 export default App;
+
